@@ -436,27 +436,27 @@ if __name__ == "__main__":
     env = gym.make('highway-v0')
     state_size = env.observation_space.shape[0]
     action_size = env.action_space.n
-    # for i in range(20):
-    #     r = np.random.rand()
-    #     alpha = np.power(10,r)
-    agent = DQNAgent(0.510543374318792)
-    agent.load(os.path.dirname(os.path.realpath(__file__))+'/KearasModels/Model3LinAcc0.510543374318792')
-    # Create a log file to print the outputs
-    with open(FilePathLog, "w") as fp:
-        print("Outputs", file=fp)
-    # env.test = True
-    # env.log = False
-    # env.test = False
-    # env.start(gui=False)
-    # trainOrTest(BATCH_SIZE, EPISODES, training=True)
-    # env.close()
-    env.log = True
-    #agent.save(os.path.dirname(os.path.realpath(__file__))+'/KearasModels/Model3LinAcc'+agent.learning_rate)
-    env.test = True
-    env.start(gui=False)
-    trainOrTest(BATCH_SIZE, episodes=2000, training=False)
+    for i in range(20):
+        r = np.random.rand()
+        alpha = np.power(10,r)
+        agent = DQNAgent(alpha)
+        #agent.load(os.path.dirname(os.path.realpath(__file__))+'/KearasModels/Model3LinAcc0.510543374318792')
+        # Create a log file to print the outputs
+        with open(FilePathLog, "w") as fp:
+            print("Outputs", file=fp)
+        env.test = True
+        env.log = False
+        env.test = False
+        env.start(gui=False)
+        trainOrTest(BATCH_SIZE, EPISODES, training=True)
+        env.close()
+        env.log = True
+        agent.save(os.path.dirname(os.path.realpath(__file__))+'/KearasModels/Model3LinAcc'+agent.learning_rate)
+        env.test = True
+        env.start(gui=False)
+        trainOrTest(BATCH_SIZE, episodes=2000, training=False)
 
-    agent.save('model')
-   # plot_model(agent.model, show_shapes=True)
+        agent.save('model')
+       # plot_model(agent.model, show_shapes=True)
 
-    env.close()
+        env.close()
