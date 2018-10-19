@@ -1,0 +1,27 @@
+<configuration>
+
+    <input>
+        <net-file value="StraightRoad.net.xml"/>
+        <route-files value="StraightRoad.rou.xml"/>
+		<collision.action value="remove"/>
+    </input>
+
+    <time>
+        <begin value="0"/>
+    </time>
+
+    <report>
+        <verbose value="true"/>
+        <no-step-log value="true"/>
+    </report>
+    <gui_only>
+        <quit-on-end value="true" />
+        <start value="true" />
+    </gui_only>
+    <random_numberType>
+        <random value="true" />
+    </random_numberType>
+    <processing>
+        <lanechange.overtake-right value="false" />
+    </processing>
+</configuration>

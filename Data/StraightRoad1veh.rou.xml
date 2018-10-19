@@ -1,0 +1,8 @@
+<routes>
+<vType id= "Auto" accel="3.000000" decel="3.000000" sigma="0.500000" maxSpeed = "40.000000" length="3.000000" color="0,0,255" vClass="passenger" minGap="0" tau="0.1"/>
+<vType id= "Car" accel="1.000000" decel="1.000000" sigma="0.500000" maxSpeed = "5.000000" length="3.000000" color="255,0,0" vClass="passenger" minGap="0" tau="0.1"/>
+<vType id= "FastCar" accel="3.000000" decel="3.000000" sigma="0.500000" maxSpeed = "20.000000" length="3.000000" color="255,0,255" vClass="passenger" minGap="0" tau="0.1"/>
+<route id="Straight" edges= "Lane"/>
+<vehicle id="Car1" color="255,0,0" depart="5"  route="Straight" type="Car"/>
+<vehicle id="Auto" color="0,0,255" depart="10"  route="Straight" type="Auto"/>
+</routes>

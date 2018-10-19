@@ -1,0 +1,13 @@
+<routes>
+<vType id= "Auto" accel="30.000000" decel="30.000000" sigma="0.500000" maxSpeed = "55.550000" length="3.000000" color="0,0,255" vClass="passenger" minGap="10" tau="1"/>
+<vType id= "Car" accel="30.000000" decel="30.000000" sigma="0.500000" maxSpeed = "11.100" length="3.000000" color="255,0,0" vClass="passenger" minGap="10" tau="1"/>
+<vType id= "FastCar" lcKeepRight="100" accel="30.000000" decel="30.000000" sigma="0.500000" maxSpeed = "55.550000" length="3.000000" color="255,0,255" vClass="passenger" minGap="10" tau="1"/>
+<route id="Straight" edges= "Lane"/>
+<flow id="SlowCar" color="255,0,0"  begin="0" end= "200" probability="0.1" type="Car">
+    <route edges="Lane"/>
+</flow>
+ <flow id="FastCar" color="255,0,255"  begin="0" end= "200" probability="0.01" type="FastCar">
+    <route edges="Lane"/>
+</flow>
+<vehicle id="Auto" color="0,0,255" depart="60"  route="Straight" type="Auto"/>
+</routes>
